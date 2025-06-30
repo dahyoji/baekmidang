@@ -99,7 +99,7 @@
     gap: 16px;
     margin-left: 80px;
     color: #fff;
-    font-size: 19px;
+    font-size: 16px;
     font-family: "Noto Serif KR", serif;
 }
 
@@ -143,17 +143,17 @@
 
 .main_visual .txt strong {
     display: block;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 400;
     color: #54524c;
-    line-height: 56px;
+    line-height: 40px;
 
 
 }
 
 .main_visual .txt p {
     margin-top: 24px;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 300;
     color: #54524c;
 }
@@ -443,10 +443,7 @@
 
 .footer {
     padding: 80px 0;
-    background: #fff;
-
-    border-top: 1px solid #333;
-
+    background: url(../images/background.jpg)
 }
 
 .footer .sns {
