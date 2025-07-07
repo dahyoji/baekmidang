@@ -1,9 +1,27 @@
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    background: rgba(255, 255, 255, .25);
+    ;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .05);
     z-index: 999;
+
+
+    transition: 0.4s;
+    backdrop-filter: blur(10px);
+}
+
+.header.on {
+    background: #f1eae0;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.header:hover {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
 
 }
 
@@ -14,7 +32,13 @@
     align-items: center;
     margin: 0 auto;
     max-width: 1410px;
-    height: 120px;
+    height: 80px;
+}
+
+
+.header.on .hd_wrap {
+    height: 80px;
+
 }
 
 .header .hd_wrap h1 img {
@@ -22,11 +46,23 @@
     transform: translate(80%, 0);
 }
 
-.header .inner {
-    display: flex;
-    align-items: center;
+.header .hd_wrap h1 a {
+    display: block;
+    width: 240px;
     height: 80px;
+    background: url(../images/logo_white.png) no-repeat center center/80px;
 }
+
+.header.on .hd_wrap h1 a {
+    background: url(../images/logo.png) no-repeat center center/80px;
+}
+
+.header:hover .hd_wrap h1 a {
+    background: url(../images/logo.png) no-repeat center center/80px;
+}
+
+
+
 
 .header h1 img {
     height: 32px;
@@ -40,6 +76,15 @@
 
 }
 
+.header .gnb>ul {
+    display: flex;
+    gap: 56px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+}
+
 .header .gnb>ul>li>a {
     display: block;
     line-height: 120px;
@@ -50,15 +95,16 @@
     word-spacing: nowrap;
 }
 
-
-.header .gnb>ul {
-    display: flex;
-    gap: 56px;
+.header.on .gnb>ul>li>a {
+    color: #333;
 }
 
-.header .gnb>ul>li {
-    position: relative;
+.header:hover .gnb>ul>li>a {
+    color: #333;
 }
+
+
+
 
 .header .gnb>ul>li ul {
     position: absolute;
@@ -103,6 +149,14 @@
     font-family: "Noto Serif KR", serif;
 }
 
+.header:hover .utils {
+    color: #333;
+}
+
+.header.on .utils {
+    color: #333;
+}
+
 .header .utils a {
     position: relative;
 
@@ -120,6 +174,13 @@
 
 }
 
+.header:hover .utils a.on::after {
+    background: #333;
+}
+
+.header.on .utils a.on::after {
+    background: #333;
+}
 
 .main_visual {
     position: relative;
@@ -304,7 +365,7 @@
     height: 40px;
     padding: 0 16px;
     border-bottom: 1px solid #ddd;
-    color: #aaa;
+
 }
 
 .main_product .tab_menu button.on {
@@ -441,9 +502,24 @@
     background: #333;
 }
 
+.main_sns {
+    background: url(../images/background.jpg)
+}
+
+.main_sns .inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+
+
+
 .footer {
     padding: 80px 0;
-    background: url(../images/background.jpg)
+    background: #fff
 }
 
 .footer .sns {
