@@ -40,6 +40,16 @@ $(function () {
         slidesToShow: 4,
         arrows: false,
         dots: true,
+
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+        ]
     });
 
     $('.main_content .arrows .prev').on('click', function () {

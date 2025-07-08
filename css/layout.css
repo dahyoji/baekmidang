@@ -12,6 +12,12 @@
     margin: 0 auto;
 }
 
+@media (max-width:768px) {
+    .inner {
+        margin: 0 16px;
+    }
+}
+
 .default {
     padding: 120px 0;
 }
