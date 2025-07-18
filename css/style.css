@@ -3,9 +3,8 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, .25);
-    ;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .05);
+    background: rgba(255, 255, 255, 0.25);
+
     z-index: 999;
 
 
@@ -14,13 +13,12 @@
 }
 
 .header.on {
-    background: #f1eae0;
+    background: #fff;
     border-bottom: 1px solid #ddd;
 
 }
 
 .header:hover {
-    background: #f1eae0;
     border-bottom: 1px solid #ddd;
 
 }
@@ -33,6 +31,7 @@
     margin: 0 auto;
     max-width: 1170px;
     height: 80px;
+
 }
 
 
@@ -190,7 +189,7 @@
         left: 0;
         right: 0;
         background: rgba(255, 255, 255, .25);
-        ;
+
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .05);
         z-index: 999;
 
@@ -622,7 +621,7 @@
 
         /*  */
         flex-direction: column;
-
+        color: #333;
     }
 
 
@@ -731,24 +730,25 @@
 
 }
 
+
+
 .main_sns {
     background: url(../images/background.jpg)
 }
 
 .main_sns .inner {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     width: 1170px;
-    margin: 0 auto;
+
 }
 
 
 @media (max-width:768px) {
 
     .main_sns .inner {
-
-        grid-template-columns: auto;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
